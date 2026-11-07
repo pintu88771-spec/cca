@@ -1,0 +1,17 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Never serve application internals directly.
+    RewriteRule ^(app|config|database|docs|resources|storage|node_modules)(/|$) - [F,L,NC]
+
+    # Route the site root to the public web folder.
+    RewriteCond %{REQUEST_URI} !/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Block requirements/sql/log files from the browser.
+<FilesMatch "\.(md|sql|log|ini|example\.php)$">
+    Require all denied
+</FilesMatch>

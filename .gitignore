@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules/
+
+# Local configuration & secrets
+/config/config.php
+
+# Runtime files
+/storage/logs/*
+/storage/backups/*
+!/storage/logs/.gitkeep
+!/storage/backups/.gitkeep
+
+# User uploads
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

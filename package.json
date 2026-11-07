@@ -1,0 +1,14 @@
+{
+  "name": "chanda-collection-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Festival chanda (donation) collection web app — Chhath Puja 2026",
+  "scripts": {
+    "dev:css": "tailwindcss -i ./resources/css/app.css -o ./public/assets/css/app.css --watch",
+    "build:css": "tailwindcss -i ./resources/css/app.css -o ./public/assets/css/app.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
